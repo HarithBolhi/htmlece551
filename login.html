@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+body {
+    background: #ffffff;
+    margin: 20px;
+    margin-top: 50px;
+}
+
+.login-form,
+.login-form * {
+    box-sizing: border-box;
+    font-family: 'Monaco';
+}
+
+.login-form {
+    max-width: 300px;
+    margin: 0 auto;
+    border-radius: 45px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+.login-form__logo-container {
+    padding: 30px;
+    background: #9DFB3B;
+}
+
+.login-form__logo {
+    display: block;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.login-form__content {
+    padding: 30px;
+    background: #FF0000;
+}
+
+.login-form__header {
+    margin-bottom: 15px;
+    text-align: center;
+    color: #333333;
+}
+
+.login-form__input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #dddddd;
+    background: #ffffff;
+    outline: none;
+    transition: border-color 0.5s;
+}
+
+.login-form__input:focus {
+    border-color: #009578;
+}
+
+.login-form__input::placeholder {
+    color: #aaaaaa;
+}
+
+.login-form__button {
+    padding: 10px;
+    color: #ffffff;
+    font-weight: bold;
+    background: #000000;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-form__button:active {
+    background: #008067;
+}
+
+.login-form__links {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.login-form__link {
+    font-size: 0.9em;
+    color: #008067;
+    text-decoration: none;
+}
+
+</style>
+   <head>
+        <title>MIHARAI Login Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/login.css">
+    </head>
+    <body>
+        <form class="login-form" action="./" method="POST"
+
+            <div class="login-form__logo-container">
+                <img class="login-form__logo" img src="company.png" alt="Logo">
+            </div>
+            <div class="login-form__content">
+                <div class="login-form__header">Please Login </div>
+                <input class="login-form__input" type="username" id="username" name="dc_username" placeholder="Username">
+                <input class="login-form__input" type="password" id="password" name="dc_username" placeholder="Password">
+                <button class="login-form__button" type="submit" onClick="auth(event)">Login</button>
+                </div>
+            </div>
+        </form>
+
+<script>
+    function auth(event) {
+          event.preventDefault();
+
+          var username = document.getElementById("username").value;
+          var password = document.getElementById("password").value;
+
+          if (username === "abc" && password === "123") {
+               window.location.replace("Section A.html");
+          } else {
+              alert("Invalid information");
+              return;
+          }
+    }
+</script>
+
+</body>
+
+</html>
